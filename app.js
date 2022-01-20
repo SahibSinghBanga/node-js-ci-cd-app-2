@@ -14,6 +14,14 @@ app.get('/health', (req, res) => {
   })
 })
 
+app.get('/about', (req, res) => {
+  res.status(200).json({
+    'success': true,
+    'status': 200,
+    'page': '/about'
+  })
+})
+
 app.listen(port, () => {
   console.log(`App Running @ http://localhost:${port}`)
 })
