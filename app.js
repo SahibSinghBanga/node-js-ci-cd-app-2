@@ -6,6 +6,14 @@ app.get('/', (req, res) => {
   res.send('Hello World From Root!')
 })
 
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    'success': true,
+    'status': 200,
+    'health': 'ok'
+  })
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
